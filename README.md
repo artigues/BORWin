@@ -16,7 +16,7 @@ Being able to compile C++ code, through a Makefile, or with an IDE.
    - For users compiling C++ code with the Makefile:
 	1. Open a terminal and go to the "src" folder of the projet: ``` cd [project_location]/BORWin/src ```
 	2. Run the Makefile with parameter "all": ``` make all ```
-	3. Run the code "BORWin" executable file generated, with the name of an instance file as a parameter: ``` ./BORWIN data/instance_test.txt ```
+	3. Run the code "BORWin" executable file generated, with the name of an instance file as a parameter: ``` ./BORWIN instance_test ```
    - For users using an IDE, please refer to your IDE manual to compile and run the code.
 3. Retrieve the output file at "[project_location]/BORWin/out/instance_test.csv".
 

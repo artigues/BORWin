@@ -40,11 +40,8 @@ Graph readGraph(std::string fileName){
 	std::vector<std::string> arcTokens;
 	int x=0;
 	while(std::getline(graphFile,line)){
-		x += 1;
-		cout << x << endl;
 		lineTokens.clear();
 		if(line.rfind("id", 0)==0){
-			cout << 'A' << endl;
 			tokenize(line, '|', lineTokens);
 			nodeTokens.clear();
 			tokenize(lineTokens[0], ' ', nodeTokens);
@@ -62,18 +59,13 @@ Graph readGraph(std::string fileName){
 				currentNode.arcs[currentArc.to]=currentArc;
 			}
 			g.nodes[currentNode.id]=currentNode;
-			cout << 'B' << endl;
 		}
 		else if(line.rfind("source", 0)==0){
-			cout << 'C' << endl;
 			tokenize(line, ' ', lineTokens);
 			g.sourceNode=lineTokens[1];
 			g.targetNode=lineTokens[3];
-			cout << 'D' << endl;
 		}
-		cout << 'E' << endl;
 	}
-	cout << 'F' << endl;
 	return g;
 }
 
