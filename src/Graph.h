@@ -31,11 +31,6 @@ struct Graph{
 	std::unordered_map<std::string, Node> nodes;
 	std::string sourceNode;
 	std::string targetNode;
-
-	template<class Archive>
-	void serialize(Archive& ar){
-		ar(nodes, sourceNode, targetNode);
-	}
 };
 
 struct Path{
