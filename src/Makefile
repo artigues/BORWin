@@ -46,27 +46,27 @@ CCFLAGS = $(CCOPT) -I$(CPLEXINCDIR) -I$(CONCERTINCDIR)
 
 
 BORWin: BORWin.o Graph.o
-        $(CCC) $(CCOPT) bin/BORWin.o bin/Graph.o -o BORWin
+	$(CCC) $(CCOPT) bin/BORWin.o bin/Graph.o -o BORWin
 
 BORWin.o: BORWin.cpp BORWin.h
-        $(CCC) $(CCOPT) bin/BORWin.o bin/Graph.o -o BORWin
+	$(CCC) $(CCOPT) bin/BORWin.o bin/Graph.o -o BORWin
 
 BORWin.o: BORWin.cpp BORWin.h
-        $(CCC) -c $(CCOPT) BORWin.cpp -o bin/BORWin.o
+	$(CCC) -c $(CCOPT) BORWin.cpp -o bin/BORWin.o
 
 Generator: Generator.o Graph.o
-        $(CCC) $(CCOPT) bin/Generator.o bin/Graph.o -o Generator
+	$(CCC) $(CCOPT) bin/Generator.o bin/Graph.o -o Generator
 
 Generator.o: Generator.cpp Generator.h
-        $(CCC) -c $(CCOPT) Generator.cpp -o bin/Generator.o
+	$(CCC) -c $(CCOPT) Generator.cpp -o bin/Generator.o
 
 Graph.o: Graph.cpp Graph.h
-        $(CCC) -c $(CCFLAGS) $(CCLNDIRS) Graph.cpp -o bin/Graph.o
+	$(CCC) -c $(CCFLAGS) $(CCLNDIRS) Graph.cpp -o bin/Graph.o
 
 
 solveILP: solveILP.o Graph.o ILP.o
-        $(CCC) $(CCFLAGS) $(CCLNDIRS) bin/solveILP.o  bin/Graph.o bin/ILP.o -o solveILP $(CCLNFLAGS)
+	$(CCC) $(CCFLAGS) $(CCLNDIRS) bin/solveILP.o  bin/Graph.o bin/ILP.o -o solveILP $(CCLNFLAGS)
 solveILP.o: solveILP.cpp
-        $(CCC) -c $(CCFLAGS) solveILP.cpp -o bin/solveILP.o
+	$(CCC) -c $(CCFLAGS) solveILP.cpp -o bin/solveILP.o
 ILP.o: ILP.cpp ILP.h
-        $(CCC) -c $(CCFLAGS) ILP.cpp -o bin/ILP.o
+	$(CCC) -c $(CCFLAGS) ILP.cpp -o bin/ILP.o
